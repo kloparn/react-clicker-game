@@ -1,7 +1,11 @@
 const upgrades = () => {
-  let points = getPoints();
-  console.log(points, getUpgrades());
-  return null;
+  let upg: string[] = [];
+  getUpgrades().forEach((upgrade) => {
+    JSON.parse(localStorage.getItem(upgrade)!) > 0
+      ? upg.push(upgrade)
+      : (upg = upg);
+  });
+  return upg;
 };
 
 const getUpgrades = () => {

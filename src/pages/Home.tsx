@@ -28,7 +28,14 @@ const Home = () => {
       <h2>
         <code>{currentPoints}</code>
       </h2>
-      <button onClick={() => setPoints(0)}>Reset points</button>
+      <button
+        onClick={() => {
+          setPoints(0);
+          Reset();
+        }}
+      >
+        Reset points
+      </button>
       <p></p>
     </Main>
   );

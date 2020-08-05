@@ -39,6 +39,7 @@ const Main = styled.div`
   display: flex;
   justify-content: space-evenly;
   font-size: 3rem;
+  align-items: center;
   overflow: hidden;
 `;
 
