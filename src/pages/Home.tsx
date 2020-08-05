@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import logo from "../logo.svg";
 import styled from "styled-components";
+import { Multiplier as CalculatedMultiplier, Reset } from "../functions";
 
 const Home = () => {
   const [currentPoints, setPoints] = useState(
     localStorage.getItem("points") === null
-      ? 0
+      ? () => {
+          Reset();
+          return 0;
+        }
       : JSON.parse(localStorage.getItem("points")!)
   );
 
@@ -16,7 +20,9 @@ const Home = () => {
   return (
     <Main>
       <h1>Click the Logo!</h1>
-      <CustomButton onClick={() => setPoints(currentPoints + 1)}>
+      <CustomButton
+        onClick={() => setPoints(currentPoints + CalculatedMultiplier())}
+      >
         <img src={logo} className="App-logo" alt="logo" />
       </CustomButton>
       <h2>
