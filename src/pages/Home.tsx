@@ -36,6 +36,8 @@ const Home = () => {
       >
         Reset points
       </button>
+      <button onClick={() => setPoints(currentPoints + 1000)}>1000+</button>
+
       <p></p>
     </Main>
   );

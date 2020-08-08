@@ -9,7 +9,7 @@ const upgrades = () => {
 };
 
 const getUpgrades = () => {
-  return ["mouseAddi", "mouseMulti"];
+  return ["mouseAddi-+-1", "mouseMulti-*-2"];
 };
 
 const getPoints = () => {
