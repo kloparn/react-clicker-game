@@ -8,8 +8,9 @@ const Manager = (strArr: string[]) => {
   let clickValue = 1;
 
   strArr.forEach((upgrade) => {
-    console.log(upgrade);
-    clickValue += JSON.parse(localStorage.getItem(upgrade)!);
+    upgrade === "mouseAddi"
+      ? (clickValue += JSON.parse(localStorage.getItem(upgrade)!))
+      : console.log("Shall do something else here"); // the strings here has a value at the end that says the value it shall add per item;
   });
   return clickValue;
 };

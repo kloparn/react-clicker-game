@@ -3,7 +3,7 @@ const upgrades = () => {
   getUpgrades().forEach((upgrade) => {
     JSON.parse(localStorage.getItem(upgrade)!) > 0
       ? upg.push(upgrade)
-      : (upg = upg);
+      : console.log(upgrade, ": No upgrade");
   });
   return upg;
 };

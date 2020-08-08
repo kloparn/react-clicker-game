@@ -74,7 +74,6 @@ const Main = styled.div`
 `;
 
 const UpgradeTag = styled.button`
-  margin: 20vh;
   background-color: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.text};
   font-size: 2rem;
